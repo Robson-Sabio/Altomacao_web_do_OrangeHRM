@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utils {
 	
@@ -31,8 +33,6 @@ public class Utils {
 		select.selectByVisibleText(item);
 	}
 	
-	
-	
 	public static String valorAleatorio() {
 		
 		int i,nrAleatorioVogal,nrAleatorioConsoante;
@@ -46,6 +46,10 @@ public class Utils {
 					nome = nome + vc;
 				}
 					return nome;
+	}
+	public static void EspereAte(WebElement selecion,int tempo) {
+		WebDriverWait wait = new WebDriverWait(driver,tempo);
+		wait.until(ExpectedConditions.visibilityOf(selecion));
 	}
 	
 	

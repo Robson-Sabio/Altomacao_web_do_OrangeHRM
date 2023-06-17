@@ -7,7 +7,10 @@ import pageObjects.CadastroUsuarioPage;
 import pageObjects.LoginPage;
 import pageObjects.TelaInicialPage;
 
+
 import static utils.Utils.*;
+
+
 
 
 
@@ -28,13 +31,26 @@ public class CadastroUsuarioSteps {
 
 	@Quando("preencher com os dados vaidos")
 	public void breencherComOsDadosVaidos() {
-	    Na(CadastroUsuarioPage.class).informarUserRole("Admin","Enabled", "Srikantha GS Aradya", "PedroDaRocha", "Ped@1234" );
+	    Na(CadastroUsuarioPage.class).informarUserRole("Admin","Enabled", "S", "PedroDaRocha", "Ped@1234" );
 	}
 
 	@Entao("o sistema aprensenta o usuario cadastrado")
 	public void oSistemaAprensentaOUsuarioCadastrado() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Na(CadastroUsuarioPage.class).confirmarCadastro();
+	}
+	@Quando("estiver na aba Admin")
+	public void estiverNaAbaAdmin() {
+		Na(TelaInicialPage.class).acionarAbaAdmin();
+	}
+
+	@Quando("aperta em deletar o usuario")
+	public void apertaEmDeletarOUsuario() {
+	    Na(CadastroUsuarioPage.class).deletarCadastro();
+	}
+
+	@Entao("o sistema apresenta usuario deletado com sucesso")
+	public void oSistemaApresentaUsuarioDeletadoComSucesso() {
+	    Na(CadastroUsuarioPage.class).confirmarCadastroDeletado();
 	}
 	
 }

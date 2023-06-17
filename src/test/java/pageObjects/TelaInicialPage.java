@@ -11,7 +11,7 @@ public class TelaInicialPage extends BasePage {
 	}
 	
 	//ELEMENTOS
-	@FindBy (xpath = "//button[text()=\" Add \"]")
+	@FindBy (xpath = "//button[@class='oxd-button oxd-button--medium oxd-button--secondary']")
 	public WebElement BotaoAdd;
 	
 	

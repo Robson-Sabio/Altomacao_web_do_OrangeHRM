@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		plugin=("pretty"),
 		features = "src/test/resources/features",
 		glue = "stepsDefinitions",
-		tags = "@Cadastro",
+		tags = "",
 		snippets = SnippetType.CAMELCASE,
 		monochrome = false,
 		dryRun = false
