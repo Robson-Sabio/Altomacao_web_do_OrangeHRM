@@ -29,12 +29,12 @@ public class CadastroUsuarioSteps {
 	    Na(TelaInicialPage.class).acionarBotaoAdd();
 	}
 
-	@Quando("preencher com os dados vaidos")
+	@Quando("preencher com os dados validos")
 	public void breencherComOsDadosVaidos() {
 	    Na(CadastroUsuarioPage.class).informarUserRole("Admin","Enabled", "S", "PedroDaRocha", "Ped@1234" );
 	}
 
-	@Entao("o sistema aprensenta o usuario cadastrado")
+	@Entao("o sistema apresenta o usuario cadastrado")
 	public void oSistemaAprensentaOUsuarioCadastrado() {
 	    Na(CadastroUsuarioPage.class).confirmarCadastro();
 	}

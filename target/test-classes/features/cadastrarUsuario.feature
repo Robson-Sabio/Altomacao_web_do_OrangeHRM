@@ -6,11 +6,11 @@
  Contexto: 
  Dado que esteja logado no sistema
  
- @CadastroBemSucedido
+ @CadastrarNovoUsuario
  Cenario: cadastrar usuario
  Quando for cadastra um novo usuario
- E preencher com os dados vaidos
- Entao o sistema aprensenta o usuario cadastrado
+ E preencher com os dados validos
+ Entao o sistema apresenta o usuario cadastrado
  
  @DeletarUsuario
  Cenario: deletar usuario
